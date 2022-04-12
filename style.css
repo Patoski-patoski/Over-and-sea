@@ -26,9 +26,85 @@ header {
     position: relative;
     z-index: 30;
 }
-
-.first {
+ .first {
     cursor: pointer;
+    display: none !important;
+} 
+
+ .second {
+    display: none !important;
+    cursor: pointer;
+
+}
+
+.first.active-icon, 
+.second.active-icon {
+    display: inline !important;
+} 
+
+
+footer i:hover,
+.menu a {
+    transform: translateY(-10px);
+    transition: 0.35s;
+    border: none;
+}
+
+
+.menu {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(88, 145, 145, 0.92);
+    opacity: 0.5;
+    padding: 8px 12px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+    transform: translateX(800px);
+    transition: ease-in 0.33s;
+
+}
+
+.menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(3, 44, 31);
+    padding: 8px 12px;
+    margin-top: 60px;
+    border-radius: 40px;
+
+
+}
+
+.active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 150px 100px;
+    border-left: none;
+    opacity: 0.6;
+    transform: translateX(10px);
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+
+
+}
+
+
+.menu li {
+    list-style: none;
 }
 
 
@@ -54,17 +130,6 @@ video {
     mix-blend-mode: overlay;
 }
 
-
-
-.second {
-    display: none !important;
-
-}
-
-.f-close {
-    display: inline-block;
-
-}
 
 
 .text {
@@ -145,69 +210,3 @@ footer i {
 
 }
 
-footer i:hover,
-.menu a {
-    transform: translateY(-10px);
-    transition: 0.55s;
-    border: none;
-}
-
-
-
-.menu {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(88, 145, 145, 0.92);
-    opacity: 0.5;
-    padding: 8px 12px; 
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 20%;
-    transform: translateX(800px);
-}
-
-.menu a{
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: rgb(3, 44, 31);
-    padding: 8px 12px;
-    margin-top: 60px;
-    border-radius: 40px;
-    
-    
-}
-
-.menu.active {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    padding: 150px 100px;
-    border-left: none;
-    opacity: 0.6;
-    transition: ease-out 0.45s;
-    transform: translateX(10px);
-
-
-}
-
-.nn {
-    background-color: rgb(3, 44, 31);
-}
-
-
-.menu li {
-    list-style: none;
-}

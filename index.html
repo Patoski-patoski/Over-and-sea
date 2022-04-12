@@ -13,9 +13,8 @@
     <div class="container">
         <header>
             <h2>Over and sea</h2>
-            <i class="second"></i>
-            <i class="fas fa-bars first fa-1.5x"></i>
-            <i class="fas fa-close second f-close"></i>
+            <i class="fas fa-bars first fa-1.5x  active-icon"></i>
+            <i class="fas fa-close second"></i>
          
             
             
@@ -58,10 +57,23 @@
         <li><a class="link" href="#">News</a></li>
 
     </ul>
-   <script>
-        document.querySelector('.first').addEventListener('click',() => document.querySelector('.menu').classList.toggle('active')).classList.toggle('second')
-        
+
+    <script>
+        document.querySelector('.first').addEventListener('click', () =>{
+            document.querySelector('.menu').classList.toggle('active')
+            document.querySelector('.first').classList.remove('active-icon')
+            document.querySelector('.second').classList.add('active-icon')
+        })
+
+        document.querySelector('.second').addEventListener('click', () =>{
+            document.querySelector('.menu').classList.toggle('active')
+            document.querySelector('.second').classList.remove('active-icon')
+            document.querySelector('.first').classList.add('active-icon')
+
+        })
+    
     </script>
+    
 
    
 </body>
