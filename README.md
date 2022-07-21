@@ -1,4 +1,4 @@
 # video-backround
-Here, i tried to make a landing page with video background
+Here, i made a template page with video background. super cool.
 
 
